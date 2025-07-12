@@ -1,0 +1,150 @@
+A1Cresult:
+  drift_status: true
+  p_value: .nan
+acarbose:
+  drift_status: false
+  p_value: 1.0
+acetohexamide:
+  drift_status: false
+  p_value: 1.0
+admission_source_id:
+  drift_status: false
+  p_value: 0.9947796240788809
+admission_type_id:
+  drift_status: false
+  p_value: 0.5872846189774776
+age:
+  drift_status: false
+  p_value: 0.5410957199434343
+change:
+  drift_status: false
+  p_value: 1.0
+chlorpropamide:
+  drift_status: false
+  p_value: 1.0
+citoglipton:
+  drift_status: false
+  p_value: 1.0
+diabetesMed:
+  drift_status: false
+  p_value: 1.0
+diag_1:
+  drift_status: false
+  p_value: 0.5403549001631311
+diag_2:
+  drift_status: false
+  p_value: 0.40981779171966115
+diag_3:
+  drift_status: false
+  p_value: 0.4714989246766832
+discharge_disposition_id:
+  drift_status: false
+  p_value: 0.9165229333010523
+encounter_id:
+  drift_status: false
+  p_value: 0.6770930920293239
+examide:
+  drift_status: false
+  p_value: 1.0
+gender:
+  drift_status: false
+  p_value: 1.0
+glimepiride:
+  drift_status: false
+  p_value: 1.0
+glimepiride-pioglitazone:
+  drift_status: false
+  p_value: 1.0
+glipizide:
+  drift_status: false
+  p_value: 0.9887131543816096
+glipizide-metformin:
+  drift_status: false
+  p_value: 1.0
+glyburide:
+  drift_status: false
+  p_value: 1.0
+glyburide-metformin:
+  drift_status: false
+  p_value: 1.0
+insulin:
+  drift_status: false
+  p_value: 0.9550552303892766
+max_glu_serum:
+  drift_status: true
+  p_value: .nan
+medical_specialty:
+  drift_status: false
+  p_value: 0.2616342906646911
+metformin:
+  drift_status: false
+  p_value: 1.0
+metformin-pioglitazone:
+  drift_status: false
+  p_value: 1.0
+metformin-rosiglitazone:
+  drift_status: false
+  p_value: 1.0
+miglitol:
+  drift_status: false
+  p_value: 1.0
+nateglinide:
+  drift_status: false
+  p_value: 0.9999999999991185
+num_lab_procedures:
+  drift_status: false
+  p_value: 0.9997376813328508
+num_medications:
+  drift_status: false
+  p_value: 0.9446230984255674
+num_procedures:
+  drift_status: false
+  p_value: 0.9999775383773578
+number_diagnoses:
+  drift_status: false
+  p_value: 0.9999999999999999
+number_emergency:
+  drift_status: false
+  p_value: 0.9999999520812288
+number_inpatient:
+  drift_status: false
+  p_value: 0.7835788218938156
+number_outpatient:
+  drift_status: false
+  p_value: 1.0
+patient_nbr:
+  drift_status: false
+  p_value: 0.49377078722688494
+payer_code:
+  drift_status: false
+  p_value: 0.9999927801878858
+pioglitazone:
+  drift_status: false
+  p_value: 1.0
+race:
+  drift_status: false
+  p_value: 0.9999999962056914
+readmitted:
+  drift_status: false
+  p_value: 0.9999999999999963
+repaglinide:
+  drift_status: false
+  p_value: 1.0
+rosiglitazone:
+  drift_status: false
+  p_value: 1.0
+time_in_hospital:
+  drift_status: false
+  p_value: 0.9228465239849268
+tolazamide:
+  drift_status: false
+  p_value: 1.0
+tolbutamide:
+  drift_status: false
+  p_value: 1.0
+troglitazone:
+  drift_status: false
+  p_value: 1.0
+weight:
+  drift_status: false
+  p_value: 1.0

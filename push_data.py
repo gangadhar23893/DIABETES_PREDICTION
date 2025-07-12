@@ -35,17 +35,33 @@ class DiabetesDataExtract():
         except Exception as e:
             raise DiabetesPredictionException(e,sys)
         
-    def insert_data_mongodb(self,records,database,collection):
+    def insert_data_mongodb(self,records,database,collection,batch_size=1000,retries=3):
         
         try:
             self.database = database
             self.collection = collection
             self.records = records
 
-            self.mongo_client = pymongo.MongoClient(MONGO_DB_URL, tls=True, tlsAllowInvalidCertificates=True)
+            self.mongo_client = pymongo.MongoClient(MONGO_DB_URL, tls=True, tlsAllowInvalidCertificates=True, tlsCAFile=ca)
             self.database = self.mongo_client[self.database]
             self.collection = self.database[self.collection]
-            self.collection.insert_many(self.records)
+            #self.collection.insert_many(self.records)
+            # Optional: clear old data
+            self.collection.delete_many({})
+
+            # Insert in batches
+            for i in range(0, len(self.records), batch_size):
+                batch = self.records[i:i + batch_size]
+                for attempt in range(retries):
+                    try:
+                        self.collection.insert_many(batch)
+                        break  # Success
+                    except pymongo.errors.AutoReconnect as e:
+                        print(f"[Retry {attempt+1}/{retries}] AutoReconnect: Retrying in 3s...")
+                        time.sleep(3)
+                        if attempt == retries - 1:
+                            raise e
+    
             return len(self.records)
         
         except Exception as e:
